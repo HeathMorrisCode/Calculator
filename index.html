@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Calc</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div id="app" class="container" style="min-width:300px;margin-top:50px">
+    <div class="d-flex justify-content-center">
+        <h1>Calc U L8r</h1>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div style="height:38px;border-bottom-right-radius:0px; border-bottom-left-radius:0px" class="calc-display card">
+            <p style="margin-bottom: 0rem; margin-right:.3rem;">{{ currentNumber }}</p>
+<!-- 			<p style="margin-bottom: 0rem; margin-right:.3rem;">{{ currentStream }}</p> -->
+        </div>
+    </div> 
+    <div class="d-flex justify-content-center">
+        <div style="width:50px;">
+            <button id="calc-ac" @click="clearTrigger('hard')">AC</button>
+            <button id="calc-ce" @click="clearTrigger('soft')">CE</button>
+        </div>
+        <div style="width:150px;display:inherit;background-color:black;">
+            <iframe width="149" height="88" src="https://www.youtube.com/embed/JDZhPod87sw?showinfo=0&autoplay=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+    </div>
+    <div class="d-flex justify-content-center">
+        <button id="calc-times" @click="keyTrigger('x')">x</button>
+        <button id="calc-divide" @click="keyTrigger('÷')">÷</button>
+        <button id="calc-plus" @click="keyTrigger('+')">+</button>
+        <button id="calc-minus" @click="keyTrigger('-')">-</button>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button id="calc-7" @click="numTrigger(7)">7</button>
+        <button id="calc-8" @click="numTrigger(8)">8</button>
+        <button id="calc-9" @click="numTrigger(9)">9</button>
+        <button id="calc-0" @click="numTrigger(0)">0</button>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button id="calc-4" @click="numTrigger(4)">4</button>
+        <button id="calc-5" @click="numTrigger(5)">5</button>
+        <button id="calc-6" @click="numTrigger(6)">6</button>
+        <button id="calc-dot" @click="numTrigger('.')">.</button>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button id="calc-1" @click="numTrigger(1)">1</button>
+        <button id="calc-2" @click="numTrigger(2)">2</button>
+        <button id="calc-3" @click="numTrigger(3)">3</button>
+        <button id="calc-eq" @click="eqTrigger('button')">=</button>
+    </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
